@@ -136,6 +136,73 @@ function mailit_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-mail_campaign-field_mail_cpn_body'.
+  $fields['node-mail_campaign-field_mail_cpn_body'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_mail_cpn_body',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'text_long',
+    ),
+    'field_instance' => array(
+      'bundle' => 'mail_campaign',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'This is the main content of the email.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 22,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_mail_cpn_body',
+      'label' => 'Body',
+      'required' => 1,
+      'settings' => array(
+        'text_processing' => '1',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'rows' => '5',
+        ),
+        'type' => 'text_textarea',
+        'weight' => '27',
+      ),
+    ),
+  );
+
   // Exported field: 'node-mail_campaign-field_mail_cpn_cc'.
   $fields['node-mail_campaign-field_mail_cpn_cc'] = array(
     'field_config' => array(
@@ -156,14 +223,14 @@ function mailit_field_default_fields() {
       'bundle' => 'mail_campaign',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'These individuals will also receive a copy of the email (even if they aren\'t on the list).',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'module' => 'email',
           'settings' => array(),
           'type' => 'email_default',
-          'weight' => 15,
+          'weight' => '15',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -186,7 +253,7 @@ function mailit_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'email_textfield',
-        'weight' => '3',
+        'weight' => '8',
       ),
     ),
   );
@@ -211,14 +278,14 @@ function mailit_field_default_fields() {
       'bundle' => 'mail_campaign',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Emails will appear to be from this address.',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'module' => 'email',
           'settings' => array(),
           'type' => 'email_default',
-          'weight' => 16,
+          'weight' => '16',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -229,8 +296,8 @@ function mailit_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_mail_cpn_from',
-      'label' => 'From',
-      'required' => 0,
+      'label' => 'From Address',
+      'required' => 1,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
@@ -241,7 +308,76 @@ function mailit_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'email_textfield',
-        'weight' => '2',
+        'weight' => '5',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-mail_campaign-field_mail_cpn_from_name'.
+  $fields['node-mail_campaign-field_mail_cpn_from_name'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_mail_cpn_from_name',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '60',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'mail_campaign',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Emails will appear to be from this person or organization.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 19,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_mail_cpn_from_name',
+      'label' => 'From Name',
+      'required' => 1,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '6',
       ),
     ),
   );
@@ -284,7 +420,7 @@ function mailit_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 7,
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -308,7 +444,7 @@ function mailit_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '11',
+        'weight' => '28',
       ),
     ),
   );
@@ -351,7 +487,7 @@ function mailit_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 8,
+          'weight' => '8',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -375,7 +511,7 @@ function mailit_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '12',
+        'weight' => '29',
       ),
     ),
   );
@@ -418,7 +554,7 @@ function mailit_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 9,
+          'weight' => '9',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -442,7 +578,7 @@ function mailit_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '13',
+        'weight' => '30',
       ),
     ),
   );
@@ -485,7 +621,7 @@ function mailit_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 10,
+          'weight' => '10',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -509,7 +645,7 @@ function mailit_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '14',
+        'weight' => '31',
       ),
     ),
   );
@@ -552,7 +688,7 @@ function mailit_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 11,
+          'weight' => '11',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -576,7 +712,7 @@ function mailit_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '15',
+        'weight' => '32',
       ),
     ),
   );
@@ -619,7 +755,7 @@ function mailit_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 12,
+          'weight' => '12',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -643,7 +779,7 @@ function mailit_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '16',
+        'weight' => '33',
       ),
     ),
   );
@@ -688,10 +824,10 @@ function mailit_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => '',
+            'image_style' => 'full',
           ),
           'type' => 'image',
-          'weight' => 13,
+          'weight' => '13',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -723,7 +859,88 @@ function mailit_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '17',
+        'weight' => '34',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-mail_campaign-field_mail_cpn_list'.
+  $fields['node-mail_campaign-field_mail_cpn_list'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_mail_cpn_list',
+      'foreign keys' => array(
+        'node' => array(
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'views',
+        'handler_settings' => array(
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+          'view' => array(
+            'args' => array(),
+            'display_name' => 'entityreference_1',
+            'view_name' => 'mail_list_options',
+          ),
+        ),
+        'target_type' => 'node',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'mail_campaign',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'The list to which the message will be sent. Because information about the list is embedded in all messages, you can only send an email to one list at a time.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'link' => FALSE,
+          ),
+          'type' => 'entityreference_label',
+          'weight' => 24,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_mail_cpn_list',
+      'label' => 'List(s)',
+      'required' => 1,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '4',
       ),
     ),
   );
@@ -768,7 +985,7 @@ function mailit_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -792,7 +1009,7 @@ function mailit_field_default_fields() {
           'size' => '30',
         ),
         'type' => 'text_textfield',
-        'weight' => '5',
+        'weight' => '20',
       ),
     ),
   );
@@ -837,7 +1054,7 @@ function mailit_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 1,
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -861,7 +1078,7 @@ function mailit_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '6',
+        'weight' => '21',
       ),
     ),
   );
@@ -906,7 +1123,7 @@ function mailit_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 4,
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -930,7 +1147,7 @@ function mailit_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '7',
+        'weight' => '22',
       ),
     ),
   );
@@ -975,7 +1192,7 @@ function mailit_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 3,
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -999,7 +1216,7 @@ function mailit_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '8',
+        'weight' => '23',
       ),
     ),
   );
@@ -1044,7 +1261,7 @@ function mailit_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 5,
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1068,7 +1285,7 @@ function mailit_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '9',
+        'weight' => '24',
       ),
     ),
   );
@@ -1113,7 +1330,7 @@ function mailit_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 6,
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1137,7 +1354,62 @@ function mailit_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '10',
+        'weight' => '25',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-mail_campaign-field_mail_cpn_replyto'.
+  $fields['node-mail_campaign-field_mail_cpn_replyto'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_mail_cpn_replyto',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'email',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'email',
+    ),
+    'field_instance' => array(
+      'bundle' => 'mail_campaign',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'When a reader hits reply, this address will be used.  ',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'email',
+          'settings' => array(),
+          'type' => 'email_default',
+          'weight' => 23,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_mail_cpn_replyto',
+      'label' => 'Reply-To Address',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'email',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'email_textfield',
+        'weight' => '7',
       ),
     ),
   );
@@ -1166,7 +1438,7 @@ function mailit_field_default_fields() {
       'locked' => '0',
       'module' => 'text',
       'settings' => array(
-        'max_length' => '140',
+        'max_length' => '70',
       ),
       'translatable' => '0',
       'type' => 'text',
@@ -1175,14 +1447,19 @@ function mailit_field_default_fields() {
       'bundle' => 'mail_campaign',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'To ensure the highest possible open rates
+<ul>
+<li>Keep your subject under 50 characters.</li>
+<li>Avoid using phrases like: free, help, percent off, and reminder</li>
+<li><a href="http://kb.mailchimp.com/article/best-practices-in-writing-email-subject-lines">MailChimp\'s guide to subjects</a></li>
+</ul>',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 17,
+          'weight' => 20,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1194,6 +1471,75 @@ function mailit_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_mail_cpn_subject',
       'label' => 'Subject',
+      'required' => 1,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '50',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-mail_campaign-field_mail_cpn_teaser'.
+  $fields['node-mail_campaign-field_mail_cpn_teaser'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_mail_cpn_teaser',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '140',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'mail_campaign',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Text here shows as a preview in many email clients.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 21,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_mail_cpn_teaser',
+      'label' => 'Teaser',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -1203,10 +1549,10 @@ function mailit_field_default_fields() {
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'size' => '60',
+          'size' => '100',
         ),
         'type' => 'text_textfield',
-        'weight' => '1',
+        'weight' => '26',
       ),
     ),
   );
@@ -1266,7 +1612,7 @@ function mailit_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => 18,
+          'weight' => '18',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1287,7 +1633,7 @@ function mailit_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '4',
+        'weight' => '5',
       ),
     ),
   );
@@ -1929,21 +2275,39 @@ function mailit_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Address');
+  t('Body');
   t('Campaign Field');
   t('Campaign Label');
   t('Carbon Copy (CC)');
   t('Code');
   t('Description');
-  t('From');
+  t('Emails will appear to be from this address.');
+  t('Emails will appear to be from this person or organization.');
+  t('From Address');
+  t('From Name');
   t('List Id');
+  t('List(s)');
   t('Media');
   t('Preview');
   t('Provide a thumbnail of what the layout is like.');
+  t('Reply-To Address');
   t('Subject');
+  t('Teaser');
   t('Template');
   t('Template Id');
+  t('Text here shows as a preview in many email clients.');
+  t('The list to which the message will be sent. Because information about the list is embedded in all messages, you can only send an email to one list at a time.');
   t('The name of the full name of the field without the "field_mail_cpn_" prefix.');
+  t('These individuals will also receive a copy of the email (even if they aren\'t on the list).');
+  t('This is the main content of the email.');
+  t('To ensure the highest possible open rates
+<ul>
+<li>Keep your subject under 50 characters.</li>
+<li>Avoid using phrases like: free, help, percent off, and reminder</li>
+<li><a href="http://kb.mailchimp.com/article/best-practices-in-writing-email-subject-lines">MailChimp\'s guide to subjects</a></li>
+</ul>');
   t('Variables');
+  t('When a reader hits reply, this address will be used.  ');
   t('mail_cpn_html1');
   t('mail_cpn_html2');
   t('mail_cpn_html3');

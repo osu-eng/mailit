@@ -15,14 +15,27 @@ function mailit_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__mail_campaign';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '2',
         ),
         'path' => array(
-          'weight' => '18',
+          'weight' => '4',
         ),
       ),
       'display' => array(),
@@ -77,9 +90,7 @@ function mailit_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_mail_campaign';
-  $strongarm->value = array(
-    0 => 'main-menu',
-  );
+  $strongarm->value = array();
   $export['menu_options_mail_campaign'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -127,7 +138,7 @@ function mailit_strongarm() {
   $strongarm->name = 'node_options_mail_campaign';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
+    1 => 'revision',
   );
   $export['node_options_mail_campaign'] = $strongarm;
 
@@ -155,7 +166,7 @@ function mailit_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_mail_campaign';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_mail_campaign'] = $strongarm;
 
   $strongarm = new stdClass();
