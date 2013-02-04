@@ -79,15 +79,6 @@ function mailit_campaign_preview_form_send($form, &$form_state) {
   $list = node_load($ref[0]['target_id']);
   $field = field_get_items('node', $campaign, 'field_mail_list_address');
 
-  /*
-  dprint_r($campaign);
-  $ref = field_get_items('node', $campaign, 'field_mail_cpn_list');
-  $list = node_load($ref[0]['target_id']);
-  dprint_r($list);
-  $body = mailit_campaign_html($campaign);
-  die("bunnies");
-  */
-
   drupal_mail('mailit', $campaign->nid, $field[0]['email'], language_default());
 
 }
@@ -158,7 +149,7 @@ function mailit_campaign_value_map($campaign) {
   	if (preg_match('/field_mail_cpn_/', $field)) {
   	  $pattern = '\*\|\s*' . str_replace('field_mail_cpn_', '', $field) . '\s*\|\*';
   	  $items = field_get_items('node', $campaign, $field);
-  	  $output = field_view_value('node', $campaign, $field, $items[0]);  	  	
+  	  $output = field_view_value('node', $campaign, $field, $items[0], 'Default');  	  	
   	  $map[$pattern] = render($output);
   	}
   } 
@@ -251,6 +242,7 @@ function mailit_template_fields() {
     // Custom fields
     'field_mail_cpn_teaser',
     'field_mail_cpn_body',
+    'field_mail_cpn_contact',
     // html
     'field_mail_cpn_html1',
     'field_mail_cpn_html2',
@@ -260,6 +252,18 @@ function mailit_template_fields() {
     'field_mail_cpn_html6',
     // images
     'field_mail_cpn_img_full1',  
+    'field_mail_cpn_img_full2',  
+    'field_mail_cpn_img_full3',  
+    'field_mail_cpn_img_half1',  
+    'field_mail_cpn_img_half2',  
+    'field_mail_cpn_img_half3',  
+    'field_mail_cpn_img_half4', 
+    'field_mail_cpn_img_third1', 
+    'field_mail_cpn_img_third2', 
+    'field_mail_cpn_img_third3', 
+    'field_mail_cpn_img_third4', 
+    'field_mail_cpn_img_third5', 
+    'field_mail_cpn_img_third6',   
     );
   return $fields;
 }

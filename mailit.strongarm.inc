@@ -75,7 +75,7 @@ function mailit_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'workbench_access' => array(
           'weight' => '5',
