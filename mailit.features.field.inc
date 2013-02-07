@@ -851,14 +851,14 @@ function mailit_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-mail_campaign-field_mail_cpn_img_full1'.
-  $fields['node-mail_campaign-field_mail_cpn_img_full1'] = array(
+  // Exported field: 'node-mail_campaign-field_mail_cpn_img1'.
+  $fields['node-mail_campaign-field_mail_cpn_img1'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_mail_cpn_img_full1',
+      'field_name' => 'field_mail_cpn_img1',
       'foreign keys' => array(
         'fid' => array(
           'columns' => array(
@@ -891,10 +891,10 @@ function mailit_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'full',
+            'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => '22',
+          'weight' => 22,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -904,8 +904,8 @@ function mailit_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_mail_cpn_img_full1',
-      'label' => 'mail_cpn_img_full1',
+      'field_name' => 'field_mail_cpn_img1',
+      'label' => 'mail_cpn_img1',
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
@@ -914,7 +914,7 @@ function mailit_field_default_fields() {
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '2MB',
         'max_resolution' => '',
-        'min_resolution' => '600x10',
+        'min_resolution' => '600x1',
         'title_field' => 0,
         'user_register_form' => FALSE,
       ),
@@ -931,14 +931,14 @@ function mailit_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-mail_campaign-field_mail_cpn_img_full2'.
-  $fields['node-mail_campaign-field_mail_cpn_img_full2'] = array(
+  // Exported field: 'node-mail_campaign-field_mail_cpn_img2'.
+  $fields['node-mail_campaign-field_mail_cpn_img2'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_mail_cpn_img_full2',
+      'field_name' => 'field_mail_cpn_img2',
       'foreign keys' => array(
         'fid' => array(
           'columns' => array(
@@ -971,10 +971,10 @@ function mailit_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'full',
+            'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => '23',
+          'weight' => 23,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -984,17 +984,17 @@ function mailit_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_mail_cpn_img_full2',
-      'label' => 'mail_cpn_img_full2',
+      'field_name' => 'field_mail_cpn_img2',
+      'label' => 'mail_cpn_img2',
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
         'default_image' => 0,
         'file_directory' => 'mail/campaign',
         'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '2MB',
+        'max_filesize' => '',
         'max_resolution' => '',
-        'min_resolution' => '600x10',
+        'min_resolution' => '600x1',
         'title_field' => 0,
         'user_register_form' => FALSE,
       ),
@@ -1002,7 +1002,7 @@ function mailit_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'full',
+          'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
@@ -1011,14 +1011,14 @@ function mailit_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-mail_campaign-field_mail_cpn_img_full3'.
-  $fields['node-mail_campaign-field_mail_cpn_img_full3'] = array(
+  // Exported field: 'node-mail_campaign-field_mail_cpn_img3'.
+  $fields['node-mail_campaign-field_mail_cpn_img3'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_mail_cpn_img_full3',
+      'field_name' => 'field_mail_cpn_img3',
       'foreign keys' => array(
         'fid' => array(
           'columns' => array(
@@ -1051,10 +1051,10 @@ function mailit_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'full',
+            'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => '24',
+          'weight' => 24,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1064,8 +1064,8 @@ function mailit_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_mail_cpn_img_full3',
-      'label' => 'mail_cpn_img_full3',
+      'field_name' => 'field_mail_cpn_img3',
+      'label' => 'mail_cpn_img3',
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
@@ -1074,7 +1074,7 @@ function mailit_field_default_fields() {
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '2MB',
         'max_resolution' => '',
-        'min_resolution' => '600x10',
+        'min_resolution' => '600x1',
         'title_field' => 0,
         'user_register_form' => FALSE,
       ),
@@ -1082,7 +1082,7 @@ function mailit_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'full',
+          'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
@@ -1091,14 +1091,14 @@ function mailit_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-mail_campaign-field_mail_cpn_img_half1'.
-  $fields['node-mail_campaign-field_mail_cpn_img_half1'] = array(
+  // Exported field: 'node-mail_campaign-field_mail_cpn_img4'.
+  $fields['node-mail_campaign-field_mail_cpn_img4'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_mail_cpn_img_half1',
+      'field_name' => 'field_mail_cpn_img4',
       'foreign keys' => array(
         'fid' => array(
           'columns' => array(
@@ -1131,10 +1131,10 @@ function mailit_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'half',
+            'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => '25',
+          'weight' => 25,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1144,8 +1144,8 @@ function mailit_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_mail_cpn_img_half1',
-      'label' => 'mail_cpn_img_half1',
+      'field_name' => 'field_mail_cpn_img4',
+      'label' => 'mail_cpn_img4',
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
@@ -1154,7 +1154,7 @@ function mailit_field_default_fields() {
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '2MB',
         'max_resolution' => '',
-        'min_resolution' => '300x10',
+        'min_resolution' => '600x1',
         'title_field' => 0,
         'user_register_form' => FALSE,
       ),
@@ -1162,7 +1162,7 @@ function mailit_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'half',
+          'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
@@ -1171,14 +1171,14 @@ function mailit_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-mail_campaign-field_mail_cpn_img_half2'.
-  $fields['node-mail_campaign-field_mail_cpn_img_half2'] = array(
+  // Exported field: 'node-mail_campaign-field_mail_cpn_img5'.
+  $fields['node-mail_campaign-field_mail_cpn_img5'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_mail_cpn_img_half2',
+      'field_name' => 'field_mail_cpn_img5',
       'foreign keys' => array(
         'fid' => array(
           'columns' => array(
@@ -1211,10 +1211,10 @@ function mailit_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'half',
+            'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => '26',
+          'weight' => 26,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1224,8 +1224,8 @@ function mailit_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_mail_cpn_img_half2',
-      'label' => 'mail_cpn_img_half2',
+      'field_name' => 'field_mail_cpn_img5',
+      'label' => 'mail_cpn_img5',
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
@@ -1234,7 +1234,7 @@ function mailit_field_default_fields() {
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '2MB',
         'max_resolution' => '',
-        'min_resolution' => '300x10',
+        'min_resolution' => '600x1',
         'title_field' => 0,
         'user_register_form' => FALSE,
       ),
@@ -1251,14 +1251,14 @@ function mailit_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-mail_campaign-field_mail_cpn_img_half3'.
-  $fields['node-mail_campaign-field_mail_cpn_img_half3'] = array(
+  // Exported field: 'node-mail_campaign-field_mail_cpn_img6'.
+  $fields['node-mail_campaign-field_mail_cpn_img6'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_mail_cpn_img_half3',
+      'field_name' => 'field_mail_cpn_img6',
       'foreign keys' => array(
         'fid' => array(
           'columns' => array(
@@ -1291,10 +1291,10 @@ function mailit_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'half',
+            'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => '27',
+          'weight' => 27,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1304,17 +1304,17 @@ function mailit_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_mail_cpn_img_half3',
-      'label' => 'mail_cpn_img_half3',
+      'field_name' => 'field_mail_cpn_img6',
+      'label' => 'mail_cpn_img6',
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
         'default_image' => 0,
         'file_directory' => 'mail/campaign',
         'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '',
+        'max_filesize' => '2MB',
         'max_resolution' => '',
-        'min_resolution' => '600x10',
+        'min_resolution' => '600x1',
         'title_field' => 0,
         'user_register_form' => FALSE,
       ),
@@ -1322,571 +1322,11 @@ function mailit_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'half',
+          'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
         'weight' => '40',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-mail_campaign-field_mail_cpn_img_half4'.
-  $fields['node-mail_campaign-field_mail_cpn_img_half4'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_mail_cpn_img_half4',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'image',
-      'settings' => array(
-        'default_image' => 0,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '0',
-      'type' => 'image',
-    ),
-    'field_instance' => array(
-      'bundle' => 'mail_campaign',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => 'half',
-          ),
-          'type' => 'image',
-          'weight' => '28',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_mail_cpn_img_half4',
-      'label' => 'mail_cpn_img_half4',
-      'required' => 0,
-      'settings' => array(
-        'alt_field' => 1,
-        'default_image' => 0,
-        'file_directory' => 'mail/campaign',
-        'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '',
-        'max_resolution' => '',
-        'min_resolution' => '300x10',
-        'title_field' => 0,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'image',
-        'settings' => array(
-          'preview_image_style' => 'half',
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'image_image',
-        'weight' => '41',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-mail_campaign-field_mail_cpn_img_third1'.
-  $fields['node-mail_campaign-field_mail_cpn_img_third1'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_mail_cpn_img_third1',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'image',
-      'settings' => array(
-        'default_image' => 0,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '0',
-      'type' => 'image',
-    ),
-    'field_instance' => array(
-      'bundle' => 'mail_campaign',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => 'third',
-          ),
-          'type' => 'image',
-          'weight' => '29',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_mail_cpn_img_third1',
-      'label' => 'mail_cpn_img_third1',
-      'required' => 0,
-      'settings' => array(
-        'alt_field' => 1,
-        'default_image' => 0,
-        'file_directory' => 'mail/campaign',
-        'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '2MB',
-        'max_resolution' => '',
-        'min_resolution' => '200x10',
-        'title_field' => 0,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'image',
-        'settings' => array(
-          'preview_image_style' => 'third',
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'image_image',
-        'weight' => '42',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-mail_campaign-field_mail_cpn_img_third2'.
-  $fields['node-mail_campaign-field_mail_cpn_img_third2'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_mail_cpn_img_third2',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'image',
-      'settings' => array(
-        'default_image' => 0,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '0',
-      'type' => 'image',
-    ),
-    'field_instance' => array(
-      'bundle' => 'mail_campaign',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => 'third',
-          ),
-          'type' => 'image',
-          'weight' => '30',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_mail_cpn_img_third2',
-      'label' => 'mail_cpn_img_third2',
-      'required' => 0,
-      'settings' => array(
-        'alt_field' => 1,
-        'default_image' => 0,
-        'file_directory' => 'mail/campaign',
-        'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '2MB',
-        'max_resolution' => '',
-        'min_resolution' => '200x10',
-        'title_field' => 0,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'image',
-        'settings' => array(
-          'preview_image_style' => 'third',
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'image_image',
-        'weight' => '43',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-mail_campaign-field_mail_cpn_img_third3'.
-  $fields['node-mail_campaign-field_mail_cpn_img_third3'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_mail_cpn_img_third3',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'image',
-      'settings' => array(
-        'default_image' => 0,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '0',
-      'type' => 'image',
-    ),
-    'field_instance' => array(
-      'bundle' => 'mail_campaign',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => 'third',
-          ),
-          'type' => 'image',
-          'weight' => '31',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_mail_cpn_img_third3',
-      'label' => 'mail_cpn_img_third3',
-      'required' => 0,
-      'settings' => array(
-        'alt_field' => 1,
-        'default_image' => 0,
-        'file_directory' => 'mail/campaign',
-        'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '2MB',
-        'max_resolution' => '',
-        'min_resolution' => '200x10',
-        'title_field' => 0,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'image',
-        'settings' => array(
-          'preview_image_style' => 'third',
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'image_image',
-        'weight' => '44',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-mail_campaign-field_mail_cpn_img_third4'.
-  $fields['node-mail_campaign-field_mail_cpn_img_third4'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_mail_cpn_img_third4',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'image',
-      'settings' => array(
-        'default_image' => 0,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '0',
-      'type' => 'image',
-    ),
-    'field_instance' => array(
-      'bundle' => 'mail_campaign',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => 'third',
-          ),
-          'type' => 'image',
-          'weight' => '32',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_mail_cpn_img_third4',
-      'label' => 'mail_cpn_img_third4',
-      'required' => 0,
-      'settings' => array(
-        'alt_field' => 1,
-        'default_image' => 0,
-        'file_directory' => 'mail/campaign',
-        'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '2MB',
-        'max_resolution' => '',
-        'min_resolution' => '200x10',
-        'title_field' => 0,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'image',
-        'settings' => array(
-          'preview_image_style' => 'third',
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'image_image',
-        'weight' => '45',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-mail_campaign-field_mail_cpn_img_third5'.
-  $fields['node-mail_campaign-field_mail_cpn_img_third5'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_mail_cpn_img_third5',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'image',
-      'settings' => array(
-        'default_image' => 0,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '0',
-      'type' => 'image',
-    ),
-    'field_instance' => array(
-      'bundle' => 'mail_campaign',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => 'third',
-          ),
-          'type' => 'image',
-          'weight' => '33',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_mail_cpn_img_third5',
-      'label' => 'mail_cpn_img_third5',
-      'required' => 0,
-      'settings' => array(
-        'alt_field' => 1,
-        'default_image' => 0,
-        'file_directory' => 'mail/campaign',
-        'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '2MB',
-        'max_resolution' => '',
-        'min_resolution' => '200x10',
-        'title_field' => 0,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'image',
-        'settings' => array(
-          'preview_image_style' => 'third',
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'image_image',
-        'weight' => '46',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-mail_campaign-field_mail_cpn_img_third6'.
-  $fields['node-mail_campaign-field_mail_cpn_img_third6'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_mail_cpn_img_third6',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'image',
-      'settings' => array(
-        'default_image' => 0,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '0',
-      'type' => 'image',
-    ),
-    'field_instance' => array(
-      'bundle' => 'mail_campaign',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => 'third',
-          ),
-          'type' => 'image',
-          'weight' => '34',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_mail_cpn_img_third6',
-      'label' => 'mail_cpn_img_third6',
-      'required' => 0,
-      'settings' => array(
-        'alt_field' => 1,
-        'default_image' => 0,
-        'file_directory' => 'mail/campaign',
-        'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '2MB',
-        'max_resolution' => '',
-        'min_resolution' => '200x10',
-        'title_field' => 0,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'image',
-        'settings' => array(
-          'preview_image_style' => 'third',
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'image_image',
-        'weight' => '47',
       ),
     ),
   );
@@ -3410,19 +2850,12 @@ function mailit_field_default_fields() {
   t('mail_cpn_html4');
   t('mail_cpn_html5');
   t('mail_cpn_html6');
-  t('mail_cpn_img_full1');
-  t('mail_cpn_img_full2');
-  t('mail_cpn_img_full3');
-  t('mail_cpn_img_half1');
-  t('mail_cpn_img_half2');
-  t('mail_cpn_img_half3');
-  t('mail_cpn_img_half4');
-  t('mail_cpn_img_third1');
-  t('mail_cpn_img_third2');
-  t('mail_cpn_img_third3');
-  t('mail_cpn_img_third4');
-  t('mail_cpn_img_third5');
-  t('mail_cpn_img_third6');
+  t('mail_cpn_img1');
+  t('mail_cpn_img2');
+  t('mail_cpn_img3');
+  t('mail_cpn_img4');
+  t('mail_cpn_img5');
+  t('mail_cpn_img6');
   t('mail_cpn_plain1');
   t('mail_cpn_plain2');
   t('mail_cpn_plain3');

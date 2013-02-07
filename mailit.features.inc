@@ -31,11 +31,11 @@ function mailit_views_api() {
 function mailit_image_default_styles() {
   $styles = array();
 
-  // Exported image style: full.
-  $styles['full'] = array(
-    'name' => 'full',
+  // Exported image style: mailit_full.
+  $styles['mailit_full'] = array(
+    'name' => 'mailit_full',
     'effects' => array(
-      1 => array(
+      4 => array(
         'label' => 'Scale',
         'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
         'effect callback' => 'image_scale_effect',
@@ -54,11 +54,11 @@ function mailit_image_default_styles() {
     ),
   );
 
-  // Exported image style: half.
-  $styles['half'] = array(
-    'name' => 'half',
+  // Exported image style: mailit_half.
+  $styles['mailit_half'] = array(
+    'name' => 'mailit_half',
     'effects' => array(
-      2 => array(
+      5 => array(
         'label' => 'Scale',
         'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
         'effect callback' => 'image_scale_effect',
@@ -68,7 +68,7 @@ function mailit_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
-          'width' => '300',
+          'width' => '240',
           'height' => '',
           'upscale' => 1,
         ),
@@ -77,11 +77,11 @@ function mailit_image_default_styles() {
     ),
   );
 
-  // Exported image style: third.
-  $styles['third'] = array(
-    'name' => 'third',
+  // Exported image style: mailit_third.
+  $styles['mailit_third'] = array(
+    'name' => 'mailit_third',
     'effects' => array(
-      3 => array(
+      6 => array(
         'label' => 'Scale',
         'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
         'effect callback' => 'image_scale_effect',
