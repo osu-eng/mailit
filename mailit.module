@@ -290,10 +290,17 @@ function mailit_form_mail_campaign_node_form_alter(&$form, &$form_state, $form_i
       '#value'  => t('Next'),
       '#submit' => array('mailit_campaign_form_next', 'node_form_submit_build_node'),
     );
-    $form['actions']['submit']['#access'] = FALSE;
   }
   else {
   	$form['actions']['next']['#access'] = TRUE;
+  }
+  
+  if (($step < MAILIT_CAMPAIGN_FORM_LAST_STEP) && !is_numeric($form['nid']['#value'])) {
+    // If it's a new node and earlier than the last step...
+    $form['actions']['submit']['#access'] = FALSE;
+  }
+  if (array_key_exists('delete', $form['actions'])) {
+    $form['actions']['delete']['#submit'] = array('mailit_node_unpublish');
   }
 
   $steps = mailit_campaign_form_by_step();
@@ -317,6 +324,16 @@ function mailit_form_mail_campaign_node_form_alter(&$form, &$form_state, $form_i
       $form[$key]['#access'] = FALSE;
     }
   }
+}
+
+/**
+ * Unpublishes a node instead of deleting.
+ */
+function mailit_node_unpublish($form, &$form_state) {
+  $node = $form['#node'];
+  $node->status = 0;
+  node_save($node);
+  drupal_goto('mail/my-campaigns');
 }
 
 /** 
