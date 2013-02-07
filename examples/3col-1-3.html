@@ -4,9 +4,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         
         <!-- Facebook sharing information tags -->
-        <meta property="og:title" content="*|MC:SUBJECT|*" />
+        <meta property="og:title" content="[mailit_campaign:subject]" />
         
-        <title>[node:field-mail-cpn-subject]</title>
+        <title>[mailit_campaign:subject]</title>
 		<style type="text/css">
 			/* Client-specific Styles */
 			#outlook a{padding:0;} /* Force Outlook to provide a "view in browser" button. */
@@ -463,14 +463,14 @@
                                     <table border="0" cellpadding="10" cellspacing="0" width="100%">
                                     	<tr>
                                         	<td valign="top">
-                                            	<div mc:edit="std_preheader_content">
-                                                	 [node:field-mail-cpn-teaser]
+                                            	<div>
+                                                	 [mailit_campaign:teaser]
                                                 </div>
                                             </td>
                                             <!-- *|IFNOT:ARCHIVE_PAGE|* -->
 											<td valign="top" width="190">
-                                            	<div mc:edit="std_preheader_links">
-                                                	Is this email not displaying correctly?<br /><a href="[site:url]campaign/[node:nid]/view" target="_blank">View it in your browser</a>.
+                                            	<div>
+                                                	Is this email not displaying correctly?<br /><a href="[mailit_campaign:url]" target="_blank">View it in your browser</a>.
                                                 </div>
                                             </td>
 											<!-- *|END:IF|* -->
@@ -491,7 +491,7 @@
                                             <td class="headerContent">
                                             
                                             	<!-- // Begin Module: Standard Header Image \\ -->
-                                                *|img_full1|*                                         	
+                                                [mailit_campaign:img1_full]          	
                                             	<!-- // End Module: Standard Header Image \\ -->
                                             
                                             </td>
@@ -511,8 +511,8 @@
                                                 <table border="0" cellpadding="20" cellspacing="0" width="100%">
                                                     <tr>
                                                         <td valign="top">
-                                                            <div mc:edit="std_content00">
-             												[node:field_mail_cpn_body]                                                 
+                                                            <div>
+             												[mailit_campaign:html2]                                                 
 															</div>
 														</td>
                                                     </tr>
@@ -526,11 +526,11 @@
                                             
                                                 <!-- // Begin Module: Top Image with Content \\ -->
                                                 <table border="0" cellpadding="20" cellspacing="0" width="100%">
-                                                    <tr mc:repeatable>
+                                                    <tr>
                                                         <td valign="top">
-                                                            *|img_third1|*   
-                                                            <div style="margin-top:10px"  mc:edit="tiwc200_content00">
-             												[node:field_mail_cpn_html1]  
+                                                            [mailit_campaign:img2_third]
+                                                            <div style="margin-top:10px">
+             												[mailit_campaign:html2]  
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -542,11 +542,11 @@
                                             
                                                 <!-- // Begin Module: Top Image with Content \\ -->
                                                 <table border="0" cellpadding="20" cellspacing="0" width="100%">
-                                                    <tr mc:repeatable>
+                                                    <tr>
                                                         <td valign="top">
-                                                            *|img_third2|*   
-                                                            <div style="margin-top:10px"  mc:edit="tiwc200_content00">
-             												[node:field_mail_cpn_html2]  
+                                                            [mailit_campaign:img3_third]
+                                                            <div style="margin-top:10px">
+             												[mailit_campaign:html3]  
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -558,11 +558,11 @@
                                             
                                                 <!-- // Begin Module: Top Image with Content \\ -->
                                                 <table border="0" cellpadding="20" cellspacing="0" width="100%">
-                                                    <tr mc:repeatable>
+                                                    <tr>
                                                         <td valign="top">
-                                                            *|img_third3|*   
-                                                            <div style="margin-top:10px" mc:edit="tiwc200_content00">
-             												[node:field_mail_cpn_html3]  
+                                                            [mailit_campaign:img4_third]
+                                                            <div style="margin-top:10px">
+             												[mailit_campaign:html4]  
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -585,7 +585,7 @@
                                                 <table border="0" cellpadding="10" cellspacing="0" width="100%">
                                                     <tr>
                                                         <td colspan="2" valign="middle" id="social">
-                                                            <div mc:edit="std_social">
+                                                            <div>
                                                                 &nbsp;<a href="https://twitter.com/osuengineering">follow on Twitter</a> | <a href="http://www.facebook.com/osuengineering">friend on Facebook</a> | <a href="http://www.linkedin.com/groups/Ohio-State-Engineering-1811516/about">connect on LinkedIn</a>&nbsp;
                                                             </div>
                                                         </td>
@@ -605,17 +605,17 @@
                                                     </tr>
                                                     <tr>
                                                         <td valign="top" colspan="2">
-                                                            <div mc:edit="std_footer">
+                                                            <div>
 																<em>Copyright &copy; [site:current-date:custom:Y] The Ohio State University, All rights reserved.</em>											
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td colspan="2" valign="middle" id="list">
-                                                            <div mc:edit="std_utility">
+                                                            <div>
                                                                 <strong>List Information</strong><br />
-																<a href="mailto:[node:field-mail-cpn-list:field-mail-list-address]">[node:field-mail-cpn-list:title]</a> ([node:field-mail-cpn-list:field-mail-list-id])<br />
-																[node:field-mail-cpn-list:field_mail_list_description]
+																<a href="mailto:[list:address]">[mailit_list:title]</a> ([mailit_list:id])<br />
+																[mailit_list:description]
                                                             </div>
                                                         </td>
                                                     </tr>
