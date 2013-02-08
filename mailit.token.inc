@@ -74,6 +74,10 @@ function mailit_token_info() {
     'name' => 'id',
     'description' => 'string identifier for the list (not nid)');
 
+  $list_tokens['url'] = array(
+    'name' => 'url',
+    'description' => 'url to view the list online');
+
   $list_tokens['address'] = array(
     'name' => 'address',
     'description' => 'email address for the list');
@@ -155,6 +159,10 @@ function mailit_tokens($type, $tokens, array $data = array(), array $options = a
       if (in_array($name, $node_fields)) {
         $replacements[$original] = check_plain($list->$name);
       }
+      else if ($name == 'url') {
+        global $base_url;
+        $replacements[$original] = $base_url . base_path() . 'node/' . $list->nid ;
+      }
       else {
         // Non-images get the default handling of the node display.
         $field = 'field_mail_list_' . $name;
@@ -164,7 +172,7 @@ function mailit_tokens($type, $tokens, array $data = array(), array $options = a
           $replacements[$original] = render($output);
         }
         else {
-          $replacements[$original] = 'bunk';
+          $replacements[$original] = '';
         }        
       }
     }

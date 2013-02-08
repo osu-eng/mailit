@@ -28,7 +28,7 @@ function mailit_filter_default_formats() {
             'AutoFormat.AutoParagraph' => '1',
             'AutoFormat.Linkify' => '1',
             'AutoFormat.RemoveEmpty' => '0',
-            'HTML.Allowed' => 'h1, h2, h3, h4, h5, a[href], em, strong, cite, blockquote, code, ul, ol, li, dl, dt, dd, p',
+            'HTML.Allowed' => 'h1, h2, h3, h4, h5, a[href], em, strong, cite, blockquote, code, ul, ol, li, dl, dt, dd, p, br',
             'HTML.ForbiddenAttributes' => 'style
 class
 ',

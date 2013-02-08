@@ -320,7 +320,7 @@ function mailit_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '28',
+        'weight' => '34',
       ),
     ),
   );
@@ -511,7 +511,7 @@ function mailit_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '29',
+        'weight' => '28',
       ),
     ),
   );
@@ -578,7 +578,7 @@ function mailit_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '30',
+        'weight' => '29',
       ),
     ),
   );
@@ -645,7 +645,7 @@ function mailit_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '31',
+        'weight' => '30',
       ),
     ),
   );
@@ -712,7 +712,7 @@ function mailit_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '32',
+        'weight' => '31',
       ),
     ),
   );
@@ -779,7 +779,7 @@ function mailit_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '33',
+        'weight' => '32',
       ),
     ),
   );
@@ -846,7 +846,7 @@ function mailit_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '34',
+        'weight' => '33',
       ),
     ),
   );

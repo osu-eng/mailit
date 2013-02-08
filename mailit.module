@@ -34,6 +34,17 @@ function mailit_menu() {
 }
 
 /**
+ * Alters the mailmime theme registry for html mail. This may mess up other mailmime use cases.
+ */
+function mailit_theme_registry_alter(&$theme_registry) {
+
+  $path_to_module = drupal_get_path('module', 'mailit');
+  $theme_registry['path']  = $path_to_module;
+  $theme_registry['theme path'] = $path_to_module;
+
+}
+
+/**
  * A form that allows the user to preview the email, send a test, or send the real message.
  */
 function mailit_campaign_preview_form($form, &$form_state, $node) {
@@ -215,8 +226,11 @@ function mailit_campaign_html($campaign) {
 
   $field = field_get_items('node', $template, 'field_mail_tpl_code');
   $html = $field[0]['value'];
+  
+  // Get rid of leading spaces to make plain text better
+  $html = preg_replace('/^\s+/', '', $html);
 
-  // Then we replace things the token way, which doesn't work with image formatters and such
+  // Replace our tokens
   $html = token_replace($html, array('mailit_campaign' => $campaign, 'mailit_list' => $list));
 
   return $html;	
