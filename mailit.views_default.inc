@@ -259,11 +259,20 @@ function mailit_views_default_views() {
   $handler->display->display_options['fields']['field_mail_cpn_teaser']['table'] = 'field_data_field_mail_cpn_teaser';
   $handler->display->display_options['fields']['field_mail_cpn_teaser']['field'] = 'field_mail_cpn_teaser';
   $handler->display->display_options['fields']['field_mail_cpn_teaser']['label'] = 'Message';
-  $handler->display->display_options['fields']['field_mail_cpn_teaser']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_mail_cpn_teaser']['alter']['text'] = '<strong>[title] ([field_mail_list_id])</strong><br />
+  $handler->display->display_options['fields']['field_mail_cpn_teaser']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_mail_cpn_teaser']['alter']['text'] = '<h2>[title] ([field_mail_list_id])</h2>
 <span style="font-size:smaller;">Updated [timestamp]</span><br />
-[field_mail_cpn_teaser]<br />';
+<p>[field_mail_cpn_teaser]</p>';
   $handler->display->display_options['fields']['field_mail_cpn_teaser']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_mail_cpn_teaser']['hide_alter_empty'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = 'Message';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<h2>[title] ([field_mail_list_id])</h2>
+<p><span style="font-size:smaller;">Updated [timestamp]</span><br />
+[field_mail_cpn_teaser]</p>';
   /* Sort criterion: Content: Updated date */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
   $handler->display->display_options['sorts']['changed']['table'] = 'node';
