@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the mailit_templates feature.
+ */
+
+include_once 'mailit_templates.features.inc';
