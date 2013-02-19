@@ -11,7 +11,7 @@ function mailit_templates_node_export_features_default() {
   $node_export = array(
   'code_string' => 'array(
   (object) array(
-      \'vid\' => \'3\',
+      \'vid\' => \'5\',
       \'uid\' => \'0\',
       \'title\' => \'3 Column 1-3\',
       \'log\' => \'\',
@@ -19,16 +19,16 @@ function mailit_templates_node_export_features_default() {
       \'comment\' => \'0\',
       \'promote\' => \'1\',
       \'sticky\' => \'0\',
-      \'vuuid\' => \'dd9a27b7-9dfd-4534-b886-f2d8e728b87c\',
+      \'vuuid\' => \'94d50b36-a067-4d49-82b8-ca70d9339219\',
       \'nid\' => \'1\',
       \'type\' => \'mail_template\',
       \'language\' => \'und\',
       \'created\' => \'1361287200\',
-      \'changed\' => \'1361290343\',
+      \'changed\' => \'1361292853\',
       \'tnid\' => \'0\',
       \'translate\' => \'0\',
       \'uuid\' => \'9e3d24e7-331b-4522-b00f-72662db73e3f\',
-      \'revision_timestamp\' => \'1361290343\',
+      \'revision_timestamp\' => \'1361292853\',
       \'revision_uid\' => \'1\',
       \'field_mail_tpl_archived\' => array(
         \'und\' => array(
@@ -65,25 +65,7 @@ function mailit_templates_node_export_features_default() {
         ),
       ),
       \'field_mail_tpl_media\' => array(),
-      \'field_mail_tpl_preview\' => array(
-        \'und\' => array(
-          array(
-            \'fid\' => \'2\',
-            \'alt\' => \'\',
-            \'title\' => \'\',
-            \'width\' => \'140\',
-            \'height\' => \'184\',
-            \'uid\' => \'1\',
-            \'filename\' => \'3col.png\',
-            \'uri\' => \'public://mail/template/preview/3col.png\',
-            \'filemime\' => \'image/png\',
-            \'filesize\' => \'719\',
-            \'status\' => \'1\',
-            \'timestamp\' => \'1361290343\',
-            \'uuid\' => \'d38ec826-26a0-4d59-b31b-858770736d4b\',
-          ),
-        ),
-      ),
+      \'field_mail_tpl_preview\' => array(),
       \'field_mail_tpl_variables\' => array(
         \'und\' => array(
           array(
@@ -104,21 +86,9 @@ function mailit_templates_node_export_features_default() {
       ),
       \'menu\' => NULL,
       \'node_export_drupal_version\' => \'7\',
-      \'node_export_dependency\' => array(
-        array(
-          \'type\' => \'file\',
-          \'id\' => \'2\',
-          \'delta\' => 0,
-          \'property\' => \'fid\',
-          \'module\' => \'image\',
-          \'field_name\' => \'field_mail_tpl_preview\',
-          \'langcode\' => \'und\',
-          \'uuid\' => \'d38ec826-26a0-4d59-b31b-858770736d4b\',
-        ),
-      ),
     ),
   (object) array(
-      \'vid\' => \'4\',
+      \'vid\' => \'6\',
       \'uid\' => \'0\',
       \'title\' => \'1 Column 1\',
       \'log\' => \'\',
@@ -126,16 +96,16 @@ function mailit_templates_node_export_features_default() {
       \'comment\' => \'0\',
       \'promote\' => \'1\',
       \'sticky\' => \'0\',
-      \'vuuid\' => \'6931721f-7cf0-4496-a997-5b36bab0b667\',
+      \'vuuid\' => \'7ab01712-2aef-49dd-b661-66008267c6bd\',
       \'nid\' => \'2\',
       \'type\' => \'mail_template\',
       \'language\' => \'und\',
       \'created\' => \'1361287200\',
-      \'changed\' => \'1361290400\',
+      \'changed\' => \'1361292873\',
       \'tnid\' => \'0\',
       \'translate\' => \'0\',
       \'uuid\' => \'bdbb5db8-d489-f694-d55e-82f209a6ac99\',
-      \'revision_timestamp\' => \'1361290400\',
+      \'revision_timestamp\' => \'1361292873\',
       \'revision_uid\' => \'1\',
       \'field_mail_tpl_archived\' => array(
         \'und\' => array(
@@ -172,25 +142,7 @@ function mailit_templates_node_export_features_default() {
         ),
       ),
       \'field_mail_tpl_media\' => array(),
-      \'field_mail_tpl_preview\' => array(
-        \'und\' => array(
-          array(
-            \'fid\' => \'3\',
-            \'alt\' => \'\',
-            \'title\' => \'\',
-            \'width\' => \'140\',
-            \'height\' => \'184\',
-            \'uid\' => \'1\',
-            \'filename\' => \'simple.png\',
-            \'uri\' => \'public://mail/template/preview/simple.png\',
-            \'filemime\' => \'image/png\',
-            \'filesize\' => \'628\',
-            \'status\' => \'1\',
-            \'timestamp\' => \'1361290400\',
-            \'uuid\' => \'cefb0567-9472-42da-a8ea-2d9856b5719c\',
-          ),
-        ),
-      ),
+      \'field_mail_tpl_preview\' => array(),
       \'field_mail_tpl_variables\' => array(
         \'und\' => array(
           array(
@@ -211,18 +163,6 @@ function mailit_templates_node_export_features_default() {
       ),
       \'menu\' => NULL,
       \'node_export_drupal_version\' => \'7\',
-      \'node_export_dependency\' => array(
-        array(
-          \'type\' => \'file\',
-          \'id\' => \'3\',
-          \'delta\' => 0,
-          \'property\' => \'fid\',
-          \'module\' => \'image\',
-          \'field_name\' => \'field_mail_tpl_preview\',
-          \'langcode\' => \'und\',
-          \'uuid\' => \'cefb0567-9472-42da-a8ea-2d9856b5719c\',
-        ),
-      ),
     ),
 )',
 );

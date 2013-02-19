@@ -1,13 +1,14 @@
-name = mailit_templates
+name = MailIt Sample Templates
 core = 7.x
 package = MailIt
+php = 5.2.4
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = mailit
+dependencies[] = node_export_features
 dependencies[] = node_export_features
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
 features[node_export_features][] = 9e3d24e7-331b-4522-b00f-72662db73e3f
 features[node_export_features][] = bdbb5db8-d489-f694-d55e-82f209a6ac99
-features_exclude[dependencies][node_export_features] = node_export_features
