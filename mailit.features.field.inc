@@ -10,280 +10,6 @@
 function mailit_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'field_collection_item-field_mail_tpl_variables-field_mail_field_cpn_default'.
-  $fields['field_collection_item-field_mail_tpl_variables-field_mail_field_cpn_default'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_mail_field_cpn_default',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(
-        'max_length' => '255',
-      ),
-      'translatable' => '0',
-      'type' => 'text',
-    ),
-    'field_instance' => array(
-      'bundle' => 'field_mail_tpl_variables',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => 'Default value for the field in the campaign. This sets the url field for links.',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 4,
-        ),
-      ),
-      'entity_type' => 'field_collection_item',
-      'field_name' => 'field_mail_field_cpn_default',
-      'label' => 'Default',
-      'required' => 0,
-      'settings' => array(
-        'text_processing' => '0',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'size' => '60',
-        ),
-        'type' => 'text_textfield',
-        'weight' => '3',
-      ),
-    ),
-  );
-
-  // Exported field: 'field_collection_item-field_mail_tpl_variables-field_mail_field_cpn_description'.
-  $fields['field_collection_item-field_mail_tpl_variables-field_mail_field_cpn_description'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_mail_field_cpn_description',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'text_long',
-    ),
-    'field_instance' => array(
-      'bundle' => 'field_mail_tpl_variables',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 2,
-        ),
-      ),
-      'entity_type' => 'field_collection_item',
-      'field_name' => 'field_mail_field_cpn_description',
-      'label' => 'Description',
-      'required' => 0,
-      'settings' => array(
-        'text_processing' => '1',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'rows' => '5',
-        ),
-        'type' => 'text_textarea',
-        'weight' => '2',
-      ),
-    ),
-  );
-
-  // Exported field: 'field_collection_item-field_mail_tpl_variables-field_mail_field_cpn_field'.
-  $fields['field_collection_item-field_mail_tpl_variables-field_mail_field_cpn_field'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_mail_field_cpn_field',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'list',
-      'settings' => array(
-        'allowed_values' => array(
-          'teaser' => 'teaser',
-          'body' => 'body',
-          'contact' => 'contact',
-          'facebook' => 'facebook',
-          'twitter' => 'twitter',
-          'linkedin' => 'linkedin',
-          'flickr' => 'flickr',
-          'youtube' => 'youtube',
-          'plain1' => 'plain1',
-          'plain2' => 'plain2',
-          'plain3' => 'plain3',
-          'plain4' => 'plain4',
-          'plain5' => 'plain5',
-          'plain6' => 'plain6',
-          'html1' => 'html1',
-          'html2' => 'html2',
-          'html3' => 'html3',
-          'html4' => 'html4',
-          'html5' => 'html5',
-          'html6' => 'html6',
-          'img1' => 'img1',
-          'img2' => 'img2',
-          'img3' => 'img3',
-          'img4' => 'img4',
-          'img5' => 'img5',
-          'img6' => 'img6',
-          'link1' => 'link1',
-          'link2' => 'link2',
-          'link3' => 'link3',
-          'link4' => 'link4',
-          'link5' => 'link5',
-          'link6' => 'link6',
-        ),
-        'allowed_values_function' => '',
-      ),
-      'translatable' => '0',
-      'type' => 'list_text',
-    ),
-    'field_instance' => array(
-      'bundle' => 'field_mail_tpl_variables',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => 'The name of the variable in the template and in the campaign content type (sans field_mail_cpn_ prefix)',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'list',
-          'settings' => array(),
-          'type' => 'list_default',
-          'weight' => 3,
-        ),
-      ),
-      'entity_type' => 'field_collection_item',
-      'field_name' => 'field_mail_field_cpn_field',
-      'label' => 'Field',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => 0,
-      ),
-    ),
-  );
-
-  // Exported field: 'field_collection_item-field_mail_tpl_variables-field_mail_field_cpn_label'.
-  $fields['field_collection_item-field_mail_tpl_variables-field_mail_field_cpn_label'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_mail_field_cpn_label',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(
-        'max_length' => '100',
-      ),
-      'translatable' => '0',
-      'type' => 'text',
-    ),
-    'field_instance' => array(
-      'bundle' => 'field_mail_tpl_variables',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 1,
-        ),
-      ),
-      'entity_type' => 'field_collection_item',
-      'field_name' => 'field_mail_field_cpn_label',
-      'label' => 'Label',
-      'required' => 0,
-      'settings' => array(
-        'text_processing' => '0',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'size' => '60',
-        ),
-        'type' => 'text_textfield',
-        'weight' => '1',
-      ),
-    ),
-  );
-
   // Exported field: 'node-mail_campaign-field_mail_cpn_body'.
   $fields['node-mail_campaign-field_mail_cpn_body'] = array(
     'field_config' => array(
@@ -3409,7 +3135,7 @@ function mailit_field_default_fields() {
           'module' => 'list',
           'settings' => array(),
           'type' => 'list_default',
-          'weight' => 6,
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -3470,10 +3196,9 @@ function mailit_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 2,
+          'type' => 'hidden',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -3497,7 +3222,7 @@ function mailit_field_default_fields() {
           'rows' => '30',
         ),
         'type' => 'text_textarea',
-        'weight' => '6',
+        'weight' => '7',
       ),
     ),
   );
@@ -3540,7 +3265,7 @@ function mailit_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -3609,7 +3334,7 @@ function mailit_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 1,
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -3675,13 +3400,9 @@ function mailit_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => '',
-          ),
-          'type' => 'image',
-          'weight' => 3,
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -3722,7 +3443,7 @@ function mailit_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '5',
+        'weight' => '6',
       ),
     ),
   );
@@ -3770,7 +3491,7 @@ function mailit_field_default_fields() {
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => 5,
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -3820,39 +3541,53 @@ function mailit_field_default_fields() {
   $fields['node-mail_template-field_mail_tpl_variables'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '-1',
+      'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_mail_tpl_variables',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'field_collection',
-      'settings' => array(
-        'hide_blank_items' => 1,
-        'path' => '',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
       ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(),
       'translatable' => '0',
-      'type' => 'field_collection',
+      'type' => 'text_long',
     ),
     'field_instance' => array(
       'bundle' => 'mail_template',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'value' => 'teaser | Preview Text | This should be a short summary or teaser for the message. It will appear wherever mail clients show preview text. For example, outlook shows previews with new mail notifications. |
+body | Body | This is the main body of your message. |
+contact | Contact Information | This contact block appears in the footer of your message. Press Shift-Enter to go to a new line without creating a separate paragraph. | College of Engineering<br />The Ohio State University
+facebook | Facebook URL | The link to your facebook page.<br />Example: https://www.facebook.com/osuengineering | https://www.facebook.com/osuengineering
+linkedin | LinkedIn URL | The link to your LinkedIn page. <br /> Example: http://www.linkedin.com/groups/Ohio-State-Engineering-1811516/about | http://www.linkedin.com/groups/Ohio-State-Engineering-1811516/about
+twitter | Twitter URL | The link to your Twitter page.<br />Example: https://twitter.com/osuengineering | https://twitter.com/osuengineering
+flickr | Flickr URL | The link to your Flickr page. <br />Example: http://www.flickr.com/photos/64065391@N03/ | http://www.flickr.com/photos/64065391@N03/
+youtube | Youtube URL | Link to your YouTube page. <br />Example: http://www.youtube.com/user/OSUEngineering | http://www.youtube.com/user/OSUEngineering
+',
+        ),
+      ),
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Pipe delimited field values.
+field_name | field_label | help_text | default_value',
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'field_collection',
-          'settings' => array(
-            'add' => 'Add',
-            'delete' => 'Delete',
-            'description' => TRUE,
-            'edit' => 'Edit',
-            'view_mode' => 'full',
-          ),
-          'type' => 'field_collection_view',
-          'weight' => 4,
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -3866,14 +3601,17 @@ function mailit_field_default_fields() {
       'label' => 'Variables',
       'required' => 0,
       'settings' => array(
+        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 0,
-        'module' => 'field_collection',
-        'settings' => array(),
-        'type' => 'field_collection_embed',
-        'weight' => '7',
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'rows' => '20',
+        ),
+        'type' => 'text_textarea',
+        'weight' => '5',
       ),
     ),
   );
@@ -3885,19 +3623,17 @@ function mailit_field_default_fields() {
   t('Carbon Copy (CC)');
   t('Code');
   t('Contact');
-  t('Default');
-  t('Default value for the field in the campaign. This sets the url field for links.');
   t('Description');
   t('Email Address');
   t('Emails will appear to be from this address.');
   t('Emails will appear to be from this person or organization.');
-  t('Field');
   t('From Address');
   t('From Name');
-  t('Label');
   t('List Id');
   t('List(s)');
   t('Media');
+  t('Pipe delimited field values.
+field_name | field_label | help_text | default_value');
   t('Preview');
   t('Provide a thumbnail of what the layout is like.');
   t('Reply-To Address');
@@ -3907,7 +3643,6 @@ function mailit_field_default_fields() {
   t('Template Id');
   t('Text here shows as a preview in many email clients.');
   t('The list to which the message will be sent. Because information about the list is embedded in all messages, you can only send an email to one list at a time.');
-  t('The name of the variable in the template and in the campaign content type (sans field_mail_cpn_ prefix)');
   t('These individuals will also receive a copy of the email (even if they aren\'t on the list).');
   t('This is the main content of the email.');
   t('To ensure the highest possible open rates
