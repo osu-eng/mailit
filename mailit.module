@@ -393,6 +393,7 @@ function mailit_form_mail_campaign_node_form_alter(&$form, &$form_state, $form_i
       $form[$key]['#access'] = FALSE;
     }
   }
+  $form['actions']['submit']['#value'] = t('Save and Preview');
 }
 
 /**

@@ -133,6 +133,9 @@ function mailit_tokens($type, $tokens, array $data = array(), array $options = a
             );
           $output = field_view_value('node', $campaign, $field, $items[0], $options);
           $replacements[$original] = render($output);
+
+          // This is a really bad way to do this, but we want image src's to always be http
+          $replacements[$original] = preg_replace('|src\s*=\s*"https|', 'src="http', $replacements[$original]);
         }
         else {
           $replacements[$original] = '';
