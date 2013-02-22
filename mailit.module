@@ -313,6 +313,7 @@ function mailit_wysiwyg_editor_settings_alter(&$settings, $context) {
   if ($context['profile']->editor == 'ckeditor') {
     $settings['forcePasteAsPlainText'] = 'true';
     $settings['height'] = 200;
+    $settings['formatTags'] = 'p,h1,h2,h3,h4,h5';
     if (isset($settings['extraPlugins'])) {
       $settings['extraPlugins'] .= ',codemirror,wordcount,bidi';
     }
