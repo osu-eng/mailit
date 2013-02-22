@@ -72,6 +72,11 @@ function mailit_campaign_preview_form($form, &$form_state, $node) {
 
   $form['nid'] = array('#type' => 'value', '#value' => $node->nid);
 
+  // Get id of list
+  $ref = field_get_items('node', $node, 'field_mail_cpn_list');
+  $list = node_load($ref[0]['target_id']);
+  $items = field_get_items('node', $list, 'field_mail_list_id');
+
   $form['actions']['edit'] = array(
     '#type' => 'submit',
     '#value' => t('Edit'),
@@ -79,7 +84,7 @@ function mailit_campaign_preview_form($form, &$form_state, $node) {
    );
   $form['actions']['send'] = array(
     '#type' => 'submit',
-    '#value' => t('Send to List'),
+    '#value' => t('Send to ' . check_plain($items[0]['value'])),
     '#submit' => array('mailit_campaign_preview_form_send'),
    );
 
