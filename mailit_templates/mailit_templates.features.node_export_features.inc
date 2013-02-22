@@ -11,7 +11,7 @@ function mailit_templates_node_export_features_default() {
   $node_export = array(
   'code_string' => 'array(
   (object) array(
-      \'vid\' => \'13\',
+      \'vid\' => \'14\',
       \'uid\' => \'1\',
       \'title\' => \'3 Column 1-3\',
       \'log\' => \'\',
@@ -19,16 +19,16 @@ function mailit_templates_node_export_features_default() {
       \'comment\' => \'0\',
       \'promote\' => \'1\',
       \'sticky\' => \'0\',
-      \'vuuid\' => \'239dfff6-f445-4127-b352-c87b35315507\',
+      \'vuuid\' => \'057e96e3-9c0f-4777-b836-8488f8a8c6a3\',
       \'nid\' => \'4\',
       \'type\' => \'mail_template\',
       \'language\' => \'und\',
       \'created\' => \'1361293085\',
-      \'changed\' => \'1361310186\',
+      \'changed\' => \'1361543466\',
       \'tnid\' => \'0\',
       \'translate\' => \'0\',
       \'uuid\' => \'9e3d24e7-331b-4522-b00f-72662db73e3f\',
-      \'revision_timestamp\' => \'1361310186\',
+      \'revision_timestamp\' => \'1361543466\',
       \'revision_uid\' => \'1\',
       \'field_mail_tpl_archived\' => array(
         \'und\' => array(
@@ -65,25 +65,7 @@ function mailit_templates_node_export_features_default() {
         ),
       ),
       \'field_mail_tpl_media\' => array(),
-      \'field_mail_tpl_preview\' => array(
-        \'und\' => array(
-          array(
-            \'fid\' => \'3\',
-            \'alt\' => \'\',
-            \'title\' => \'\',
-            \'width\' => \'140\',
-            \'height\' => \'184\',
-            \'uid\' => \'1\',
-            \'filename\' => \'3col.png\',
-            \'uri\' => \'public://mail/template/preview/3col.png\',
-            \'filemime\' => \'image/png\',
-            \'filesize\' => \'719\',
-            \'status\' => \'1\',
-            \'timestamp\' => \'1361298415\',
-            \'uuid\' => \'c5409407-98f4-4d88-aa10-9a7413cbea78\',
-          ),
-        ),
-      ),
+      \'field_mail_tpl_preview\' => array(),
       \'field_mail_tpl_variables\' => array(
         \'und\' => array(
           array(
@@ -106,7 +88,7 @@ function mailit_templates_node_export_features_default() {
       \'node_export_drupal_version\' => \'7\',
     ),
   (object) array(
-      \'vid\' => \'7\',
+      \'vid\' => \'15\',
       \'uid\' => \'1\',
       \'title\' => \'1 Column 1\',
       \'log\' => \'\',
@@ -114,16 +96,16 @@ function mailit_templates_node_export_features_default() {
       \'comment\' => \'0\',
       \'promote\' => \'1\',
       \'sticky\' => \'0\',
-      \'vuuid\' => \'661b2db4-01c3-4d35-a6e5-bb9cca8690e3\',
+      \'vuuid\' => \'e6e1f3d4-3be5-4156-9c73-2975b68a4469\',
       \'nid\' => \'5\',
       \'type\' => \'mail_template\',
       \'language\' => \'und\',
       \'created\' => \'1361293085\',
-      \'changed\' => \'1361298440\',
+      \'changed\' => \'1361543479\',
       \'tnid\' => \'0\',
       \'translate\' => \'0\',
       \'uuid\' => \'bdbb5db8-d489-f694-d55e-82f209a6ac99\',
-      \'revision_timestamp\' => \'1361298440\',
+      \'revision_timestamp\' => \'1361543479\',
       \'revision_uid\' => \'1\',
       \'field_mail_tpl_archived\' => array(
         \'und\' => array(
@@ -160,25 +142,7 @@ function mailit_templates_node_export_features_default() {
         ),
       ),
       \'field_mail_tpl_media\' => array(),
-      \'field_mail_tpl_preview\' => array(
-        \'und\' => array(
-          array(
-            \'fid\' => \'4\',
-            \'alt\' => \'\',
-            \'title\' => \'\',
-            \'width\' => \'140\',
-            \'height\' => \'184\',
-            \'uid\' => \'1\',
-            \'filename\' => \'simple.png\',
-            \'uri\' => \'public://mail/template/preview/simple.png\',
-            \'filemime\' => \'image/png\',
-            \'filesize\' => \'628\',
-            \'status\' => \'1\',
-            \'timestamp\' => \'1361298440\',
-            \'uuid\' => \'d26fd897-8f79-4001-a977-6af3ac3d0413\',
-          ),
-        ),
-      ),
+      \'field_mail_tpl_preview\' => array(),
       \'field_mail_tpl_variables\' => array(
         \'und\' => array(
           array(
