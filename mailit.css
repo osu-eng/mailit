@@ -1,1 +1,4 @@
 .node-mail_campaign-form .filter-wrapper {display: none;}
+#mailit-campaign-preview-form #edit-delete {float: right;}
+.page-campaign-preview .content-style {width: 711px;}
+#mail-campaign-node-form {width:711px;}
