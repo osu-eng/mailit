@@ -278,7 +278,7 @@ function mailit_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '35',
+        'weight' => '36',
       ),
     ),
   );
@@ -362,7 +362,7 @@ function mailit_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '39',
+        'weight' => '40',
       ),
     ),
   );
@@ -968,7 +968,7 @@ function mailit_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '46',
+        'weight' => '35',
       ),
     ),
   );
@@ -1048,7 +1048,7 @@ function mailit_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '47',
+        'weight' => '36',
       ),
     ),
   );
@@ -1128,7 +1128,7 @@ function mailit_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '48',
+        'weight' => '37',
       ),
     ),
   );
@@ -1208,7 +1208,7 @@ function mailit_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '49',
+        'weight' => '38',
       ),
     ),
   );
@@ -1288,7 +1288,7 @@ function mailit_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '50',
+        'weight' => '39',
       ),
     ),
   );
@@ -1368,7 +1368,7 @@ function mailit_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '51',
+        'weight' => '40',
       ),
     ),
   );
@@ -1452,7 +1452,7 @@ function mailit_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '40',
+        'weight' => '41',
       ),
     ),
   );
@@ -1536,7 +1536,7 @@ function mailit_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '41',
+        'weight' => '42',
       ),
     ),
   );
@@ -1620,7 +1620,7 @@ function mailit_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '42',
+        'weight' => '43',
       ),
     ),
   );
@@ -1704,7 +1704,7 @@ function mailit_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '43',
+        'weight' => '44',
       ),
     ),
   );
@@ -1788,7 +1788,7 @@ function mailit_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '44',
+        'weight' => '45',
       ),
     ),
   );
@@ -1872,7 +1872,7 @@ function mailit_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '45',
+        'weight' => '46',
       ),
     ),
   );
@@ -1956,7 +1956,7 @@ function mailit_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '36',
+        'weight' => '37',
       ),
     ),
   );
@@ -2814,7 +2814,7 @@ function mailit_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '37',
+        'weight' => '38',
       ),
     ),
   );
@@ -2898,7 +2898,7 @@ function mailit_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '38',
+        'weight' => '39',
       ),
     ),
   );

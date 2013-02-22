@@ -50,6 +50,44 @@ function mailit_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_mail_cpn_links|node|mail_campaign|form';
+  $field_group->group_name = 'group_mail_cpn_links';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'mail_campaign';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_mail_cpn_tpl_fields';
+  $field_group->data = array(
+    'label' => 'Links',
+    'weight' => '41',
+    'children' => array(
+      0 => 'field_mail_cpn_facebook',
+      1 => 'field_mail_cpn_flickr',
+      2 => 'field_mail_cpn_link1',
+      3 => 'field_mail_cpn_link2',
+      4 => 'field_mail_cpn_link3',
+      5 => 'field_mail_cpn_link4',
+      6 => 'field_mail_cpn_link5',
+      7 => 'field_mail_cpn_link6',
+      8 => 'field_mail_cpn_linkedin',
+      9 => 'field_mail_cpn_twitter',
+      10 => 'field_mail_cpn_youtube',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Links',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $export['group_mail_cpn_links|node|mail_campaign|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_mail_cpn_tpl_fields|node|mail_campaign|form';
   $field_group->group_name = 'group_mail_cpn_tpl_fields';
   $field_group->entity_type = 'node';
@@ -81,17 +119,7 @@ function mailit_field_group_info() {
       18 => 'field_mail_cpn_plain5',
       19 => 'field_mail_cpn_plain6',
       20 => 'field_mail_cpn_teaser',
-      21 => 'field_mail_cpn_facebook',
-      22 => 'field_mail_cpn_linkedin',
-      23 => 'field_mail_cpn_youtube',
-      24 => 'field_mail_cpn_flickr',
-      25 => 'field_mail_cpn_twitter',
-      26 => 'field_mail_cpn_link1',
-      27 => 'field_mail_cpn_link2',
-      28 => 'field_mail_cpn_link3',
-      29 => 'field_mail_cpn_link4',
-      30 => 'field_mail_cpn_link5',
-      31 => 'field_mail_cpn_link6',
+      21 => 'group_mail_cpn_links',
     ),
     'format_type' => 'div',
     'format_settings' => array(

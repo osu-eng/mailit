@@ -84,6 +84,7 @@ features[field][] = node-mail_template-field_mail_tpl_media
 features[field][] = node-mail_template-field_mail_tpl_preview
 features[field][] = node-mail_template-field_mail_tpl_variables
 features[field_group][] = group_mail_cpn_email|node|mail_campaign|form
+features[field_group][] = group_mail_cpn_links|node|mail_campaign|form
 features[field_group][] = group_mail_cpn_tpl_fields|node|mail_campaign|form
 features[field_group][] = group_mail_cpn_tpl|node|mail_campaign|form
 features[filter][] = mail
