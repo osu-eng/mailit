@@ -217,12 +217,21 @@ function mailit_views_default_views() {
   $handler->display->display_options['relationships']['field_mail_cpn_list_target_id']['field'] = 'field_mail_cpn_list_target_id';
   $handler->display->display_options['relationships']['field_mail_cpn_list_target_id']['label'] = 'List';
   $handler->display->display_options['relationships']['field_mail_cpn_list_target_id']['required'] = TRUE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Field: Content: Preview */
   $handler->display->display_options['fields']['field_mail_tpl_preview']['id'] = 'field_mail_tpl_preview';
   $handler->display->display_options['fields']['field_mail_tpl_preview']['table'] = 'field_data_field_mail_tpl_preview';
   $handler->display->display_options['fields']['field_mail_tpl_preview']['field'] = 'field_mail_tpl_preview';
   $handler->display->display_options['fields']['field_mail_tpl_preview']['relationship'] = 'field_mail_cpn_tpl_ref_target_id';
   $handler->display->display_options['fields']['field_mail_tpl_preview']['label'] = '';
+  $handler->display->display_options['fields']['field_mail_tpl_preview']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_mail_tpl_preview']['alter']['path'] = 'campaign/[nid]/preview';
   $handler->display->display_options['fields']['field_mail_tpl_preview']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_mail_tpl_preview']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_mail_tpl_preview']['settings'] = array(
@@ -235,9 +244,12 @@ function mailit_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['path'] = 'campaign/[nid]/preview';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: List Id */
   $handler->display->display_options['fields']['field_mail_list_id']['id'] = 'field_mail_list_id';
   $handler->display->display_options['fields']['field_mail_list_id']['table'] = 'field_data_field_mail_list_id';
