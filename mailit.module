@@ -339,15 +339,21 @@ function mailit_form_mail_campaign_node_form_alter(&$form, &$form_state, $form_i
           $form[$key][$lang][0]['#description'] = $map[$key]['description'];
           if (!array_key_exists('#type', $form[$key][$lang][0])) {
             // For some reason plain text has no type.
-            $form[$key][$lang][0]['value']['#default_value'] = $map[$key]['default'];
+            if (!isset($form[$key][$lang][0]['value']['#default_value'])) {
+              $form[$key][$lang][0]['value']['#default_value'] = $map[$key]['default'];
+            }
           }
           else {
             switch ($form[$key][$lang][0]['#type']) {
               case 'text_format':
-                $form[$key][$lang][0]['#default_value'] = $map[$key]['default'];
+                if (!isset($form[$key][$lang][0]['#default_value'])) {
+                  $form[$key][$lang][0]['#default_value'] = $map[$key]['default'];
+                }
                 break;
               case 'link_field':
-                $form[$key][$lang][0]['#default_value']['url'] = $map[$key]['default'];
+                if (!isset($form[$key][$lang][0]['#default_value']['url'])) {
+                  $form[$key][$lang][0]['#default_value']['url'] = $map[$key]['default'];
+                }
                 break;
               case 'managed_file':
               default:

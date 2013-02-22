@@ -53,6 +53,10 @@ function mailit_token_info() {
     'name' => 'sociallinks',
     'description' => 'pipe delimited list of links');
 
+  $campaign_tokens['links'] = array(
+    'name' => 'links',
+    'description' => 'pipe delimited list of links with social links first');
+
   // Email List
   $list_type = array(
     'name' => t('Email List'),
@@ -142,7 +146,6 @@ function mailit_tokens($type, $tokens, array $data = array(), array $options = a
         $replacements[$original] = $base_url . base_path() . 'campaign/' . $campaign->nid . '/v/' . $campaign->vid ;
       }
       else if ($name == 'sociallinks') {
-        // Do this after all the others
         $social = array('twitter', 'facebook', 'linkedin', 'youtube', 'flickr');
         $social_links = array();
         foreach ($social as $name) {
@@ -154,6 +157,27 @@ function mailit_tokens($type, $tokens, array $data = array(), array $options = a
           }
         }
         $replacements[$original] = join (' | ', $social_links);
+      }
+      else if ($name == 'links') {
+        $social = array('twitter', 'facebook', 'linkedin', 'youtube', 'flickr');
+        $social_links = array();
+        foreach ($social as $name) {
+          $field = 'field_mail_cpn_' . $name;
+          $items = field_get_items('node', $campaign, $field);
+          if ($items) {
+            $output = field_view_value('node', $campaign, $field, $items[0], 'Default');
+            $links[] = render($output);
+          }
+        }
+        for ($i=1; $i<=6; $i++) {
+          $field = 'field_mail_cpn_link' . $i;
+          $items = field_get_items('node', $campaign, $field);
+          if ($items) {
+            $output = field_view_value('node', $campaign, $field, $items[0], 'Default');
+            $links[] = render($output);
+          }
+        }
+        $replacements[$original] = join (' | ', $links);
       }
       else {
       	// Non-images get the default handling of the node display.
