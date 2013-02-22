@@ -57,7 +57,7 @@ function mailit_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_mail_cpn_tpl_fields';
   $field_group->data = array(
-    'label' => 'Links',
+    'label' => 'Footer Links',
     'weight' => '41',
     'children' => array(
       0 => 'field_mail_cpn_facebook',
@@ -74,11 +74,11 @@ function mailit_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Links',
+      'label' => 'Footer Links',
       'instance_settings' => array(
         'required_fields' => 1,
         'classes' => '',
-        'description' => '',
+        'description' => 'A collection of links that will go in the footer of your email.',
       ),
       'formatter' => 'collapsed',
     ),
