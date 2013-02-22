@@ -4,9 +4,15 @@ function mailit_schema() {
   $schema['mailit_log'] = array(
     'description' => 'A table containing a log of sent messages.',
     'fields' => array(
+      'mid' => array(
+        'description' => 'The primary identifier for a message log entry.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
       'nid' => array(
         'description' => 'The primary identifier for a node.',
-        'type' => 'serial',
+        'type' => 'int',
         'unsigned' => TRUE,
         'not null' => TRUE,
       ),
@@ -18,7 +24,7 @@ function mailit_schema() {
         'default' => 0,
       ),
       'uid' => array(
-        'description' => 'The {users}.uid that owns this node; initially, this is the user that created it.',
+        'description' => 'The {users}.uid that sent this node.',
         'type' => 'int',
         'not null' => TRUE,
         'default' => 0,
@@ -42,7 +48,7 @@ function mailit_schema() {
         'size' => 'medium',
       ),
     ),
-    'primary key' => array('nid', 'vid'),
+    'primary key' => array('mid'),
   );
   return $schema;
 }

@@ -28,10 +28,18 @@ function mailit_menu() {
     'type' => MENU_CALLBACK,
     );
 
+  $items['campaign/%/log'] = array(
+    'page callback' => 'mailit_campaign_view',
+    'page arguments' => array(1),
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+    );
+
   $items['campaign/%node/preview'] = array(
     'page callback' => 'drupal_get_form',
     'page arguments' => array('mailit_campaign_preview_form', 1),
-    'access arguments' => array('access content'),
+    'access callback' => 'node_access',
+    'access arguments' => array('update', '1'),
     'type' => MENU_CALLBACK,
     );
 
@@ -101,9 +109,9 @@ function mailit_campaign_preview_form($form, &$form_state, $node) {
    );
 
   $rows = array();
-  $results = db_query("SELECT nid, vid, recipient, created FROM {mailit_log} WHERE nid = :nid ORDER BY created DESC ", array(':nid' => $node->nid));
+  $results = db_query("SELECT mid, nid, vid, recipient, created FROM {mailit_log} WHERE nid = :nid ORDER BY created DESC ", array(':nid' => $node->nid));
   while ($log = $results->fetchObject()) {
-    $rows[] = array(l('view', 'campaign/' . $log->nid . '/v/' . $log->vid), $log->recipient, date('M j, Y @ g:i a', $log->created));
+    $rows[] = array(l('view', 'campaign/' . $log->mid . '/log'), $log->recipient, date('M j, Y @ g:i a', $log->created));
   }
   if (count($rows) > 0) {
     $form['log'] = array(
@@ -208,10 +216,6 @@ function mailit_mail($key, &$message, $params) {
       }
     }
 
-    db_delete('mailit_log')
-      ->condition('nid', $campaign->nid)
-      ->condition('vid', $campaign->vid)
-      ->execute();
     db_insert('mailit_log')
       ->fields(array(
         'nid' => $campaign->nid,
@@ -270,20 +274,33 @@ function mailit_campaign_html($campaign) {
 
 /**
  * Menu callback to view a campaign.
+ *
+ * This handles either mid or nid + vid as inputs
  */
-function mailit_campaign_view($nid, $vid) {
-  $campaign = node_load($nid);
-  if ($campaign->vid = $vid) {
-    // If the vid is the current vid, always show a live rendering
-    print mailit_campaign_html($campaign);
-  }
-  else if ($log = db_query("SELECT * FROM {mailit_log} WHERE nid = :nid and vid = :vid", array(':nid' => $nid, ':vid' => $vid))->fetchObject()) {
-    // If we need something other than the current version, assume we're trying to send it from the log
-  	print $log->html;
+function mailit_campaign_view($nid, $vid=NULL) {
+  if (is_null($vid)) {
+    if ($log = db_query("SELECT * FROM {mailit_log} WHERE mid = :mid ", array(':mid' => $nid))->fetchObject()) {
+      // If we need something other than the current version, assume we're trying to send it from the log
+      print $log->html;
+    }
+    else {
+      drupal_not_found();
+    }
   }
   else {
-    // Otherwise this is not something we should show.
-  	drupal_not_found();
+    $campaign = node_load($nid);
+    if ($campaign->vid = $vid) {
+      // If the vid is the current vid, always show a live rendering
+      print mailit_campaign_html($campaign);
+    }
+    else if ($log = db_query("SELECT * FROM {mailit_log} WHERE nid = :nid and vid = :vid", array(':nid' => $nid, ':vid' => $vid))->fetchObject()) {
+      // If we need something other than the current version, assume we're trying to send it from the log
+    	print $log->html;
+    }
+    else {
+      // Otherwise this is not something we should show.
+    	drupal_not_found();
+    }
   }
 }
 
