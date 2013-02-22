@@ -4,10 +4,10 @@
  * Implementation of hook_token_info().
  */
 function mailit_token_info() {
-  
+
   $campaign_type = array(
-    'name' => t('Email Message'), 
-    'description' => t('Tokens related to individual email message or campaign.'), 
+    'name' => t('Email Message'),
+    'description' => t('Tokens related to individual email message or campaign.'),
     'needs-data' => 'mailit_campaign',
     );
 
@@ -36,7 +36,7 @@ function mailit_token_info() {
   $campaign_tokens['nid'] = array(
     'name' => 'nid',
     'description' => 'id of the campaign node');
-  
+
   $campaign_tokens['vid'] = array(
     'name' => 'vid',
     'description' => 'version id of the campaign node');
@@ -49,15 +49,19 @@ function mailit_token_info() {
     'name' => 'url',
     'description' => 'url to view the message online');
 
+  $campaign_tokens['sociallinks'] = array(
+    'name' => 'sociallinks',
+    'description' => 'pipe delimited list of links');
+
   // Email List
   $list_type = array(
-    'name' => t('Email List'), 
-    'description' => t('Tokens related to an email list.'), 
+    'name' => t('Email List'),
+    'description' => t('Tokens related to an email list.'),
     'needs-data' => 'mailit_list',
     );
 
   $list_tokens = array();
-  
+
   $list_tokens['nid'] = array(
     'name' => 'nid',
     'description' => 'id of the list node');
@@ -65,11 +69,11 @@ function mailit_token_info() {
   $list_tokens['vid'] = array(
     'name' => 'vid',
     'description' => 'version id of the list node');
-  
+
   $list_tokens['title'] = array(
     'name' => 'title',
     'description' => 'title of the list node');
-  
+
   $list_tokens['id'] = array(
     'name' => 'id',
     'description' => 'string identifier for the list (not nid)');
@@ -81,7 +85,7 @@ function mailit_token_info() {
   $list_tokens['address'] = array(
     'name' => 'address',
     'description' => 'email address for the list');
-  
+
   $list_tokens['description'] = array(
     'name' => 'description',
     'description' => 'description of the list');
@@ -102,11 +106,11 @@ function mailit_token_info() {
  * Implementation of hook_tokens().
  */
 function mailit_tokens($type, $tokens, array $data = array(), array $options = array()) {
-  
+
   $replacements = array();
 
   $node_fields = array('nid', 'vid', 'title');
-  
+
   if ($type == 'mailit_campaign' && !empty($data['mailit_campaign'])) {
     $campaign = $data['mailit_campaign'];
 
@@ -120,10 +124,10 @@ function mailit_tokens($type, $tokens, array $data = array(), array $options = a
           $options = array(
             'type' => 'image',
             'settings' => array(
-              'image_style' => 'mailit_' . $style, 
+              'image_style' => 'mailit_' . $style,
               ),
             );
-          $output = field_view_value('node', $campaign, $field, $items[0], $options);  	
+          $output = field_view_value('node', $campaign, $field, $items[0], $options);
           $replacements[$original] = render($output);
         }
         else {
@@ -137,12 +141,26 @@ function mailit_tokens($type, $tokens, array $data = array(), array $options = a
         global $base_url;
         $replacements[$original] = $base_url . base_path() . 'campaign/' . $campaign->nid . '/v/' . $campaign->vid ;
       }
+      else if ($name == 'sociallinks') {
+        // Do this after all the others
+        $social = array('twitter', 'facebook', 'linkedin', 'youtube', 'flickr');
+        $social_links = array();
+        foreach ($social as $name) {
+          $field = 'field_mail_cpn_' . $name;
+          $items = field_get_items('node', $campaign, $field);
+          if ($items) {
+            $output = field_view_value('node', $campaign, $field, $items[0], 'Default');
+            $social_links[] = render($output);
+          }
+        }
+        $replacements[$original] = join (' | ', $social_links);
+      }
       else {
       	// Non-images get the default handling of the node display.
 	      $field = 'field_mail_cpn_' . $name;
 	      $items = field_get_items('node', $campaign, $field);
         if ($items) {
-          $output = field_view_value('node', $campaign, $field, $items[0], 'Default');  	 
+          $output = field_view_value('node', $campaign, $field, $items[0], 'Default');
   	      $replacements[$original] = render($output);
         }
         else {
@@ -168,12 +186,12 @@ function mailit_tokens($type, $tokens, array $data = array(), array $options = a
         $field = 'field_mail_list_' . $name;
         $items = field_get_items('node', $list, $field);
         if ($items) {
-          $output = field_view_value('node', $list, $field, $items[0], 'Default');     
+          $output = field_view_value('node', $list, $field, $items[0], 'Default');
           $replacements[$original] = render($output);
         }
         else {
           $replacements[$original] = '';
-        }        
+        }
       }
     }
   }
