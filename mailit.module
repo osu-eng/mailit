@@ -269,6 +269,9 @@ function mailit_campaign_html($campaign) {
   // Replace our tokens
   $html = token_replace($html, array('mailit_campaign' => $campaign, 'mailit_list' => $list));
 
+  // Remove unwanted whitespace (improves plain text messages)
+  $html = preg_replace('/[\t\s\n]*(<.*>)[\t\s\n]*/', '$1', $html);
+
   return $html;
 }
 
