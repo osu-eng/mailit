@@ -38,12 +38,16 @@ function mailit_menu() {
   $items['campaign/%node/preview'] = array(
     'page callback' => 'drupal_get_form',
     'page arguments' => array('mailit_campaign_preview_form', 1),
-    'access callback' => 'node_access',
+    'access callback' => 'mailit_node_access_wrapper',
     'access arguments' => array('update', '1'),
     'type' => MENU_CALLBACK,
     );
 
   return $items;
+}
+
+function mailit_node_access_wrapper($op, $nid) {
+  return node_access($op, node_load($nid));
 }
 
 /**
