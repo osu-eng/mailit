@@ -39,7 +39,7 @@ function mailit_menu() {
     'page callback' => 'drupal_get_form',
     'page arguments' => array('mailit_campaign_preview_form', 1),
     'access callback' => 'mailit_node_access_wrapper',
-    'access arguments' => array('update', '1'),
+    'access arguments' => array('update', 1),
     'type' => MENU_CALLBACK,
     );
 
