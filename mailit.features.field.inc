@@ -3616,6 +3616,88 @@ field_name | field_label | help_text | default_value',
     ),
   );
 
+  // Exported field: 'node-mail_template-field_mail_tpl_weight'.
+  $fields['node-mail_template-field_mail_tpl_weight'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_mail_tpl_weight',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          -10 => '-10',
+          -9 => '-9',
+          -8 => '-8',
+          -7 => '-7',
+          -6 => '-6',
+          -5 => '-5',
+          -4 => '-4',
+          -3 => '-3',
+          -2 => '-2',
+          -1 => '-1',
+          0 => '0',
+          1 => '1',
+          2 => '2',
+          3 => '3',
+          4 => '4',
+          5 => '5',
+          6 => '6',
+          7 => '7',
+          8 => '8',
+          9 => '9',
+          10 => '10',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_integer',
+    ),
+    'field_instance' => array(
+      'bundle' => 'mail_template',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => 7,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_mail_tpl_weight',
+      'label' => 'Weight',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '9',
+      ),
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Archived');
@@ -3652,6 +3734,7 @@ field_name | field_label | help_text | default_value');
 <li><a href="http://kb.mailchimp.com/article/best-practices-in-writing-email-subject-lines">MailChimp\'s guide to subjects</a></li>
 </ul>');
   t('Variables');
+  t('Weight');
   t('When a reader hits reply, this address will be used.  ');
   t('facebook');
   t('flickr');
