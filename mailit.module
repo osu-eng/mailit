@@ -46,8 +46,8 @@ function mailit_menu() {
   return $items;
 }
 
-function mailit_node_access_wrapper($op, $nid) {
-  return node_access($op, node_load($nid));
+function mailit_node_access_wrapper($op, $node) {
+  return node_access($op, $node;
 }
 
 /**
