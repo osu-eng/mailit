@@ -143,11 +143,14 @@ function mailit_campaign_preview_form($form, &$form_state, $node) {
  * Form callback to send email
  */
 function mailit_campaign_preview_form_send($form, &$form_state) {
-  $campaign = node_load($form_state['values']['nid']);
 
-  if ($form_state['values']['op'] == 'Send to List') {
-    $ref = field_get_items('node', $campaign, 'field_mail_cpn_list');
-    $list = node_load($ref[0]['target_id']);
+
+  $campaign = node_load($form_state['values']['nid']);
+  $ref = field_get_items('node', $campaign, 'field_mail_cpn_list');
+  $list = node_load($ref[0]['target_id']);
+  $items = field_get_items('node', $list, 'field_mail_list_id');
+
+  if ($form_state['values']['op'] == 'Send to ' . check_plain($items[0]['value']) ) {
     $field = field_get_items('node', $campaign, 'field_mail_list_address');
     drupal_mail('mailit', 'send/' . $campaign->nid, $field[0]['email'], language_default());
     drupal_set_message(t('Message sent to !mail', array('!mail' => $field[0]['email'])));
