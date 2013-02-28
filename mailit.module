@@ -392,7 +392,7 @@ function mailit_form_mail_campaign_node_form_alter(&$form, &$form_state, $form_i
 
           $lang = $form[$key]['#language'];
           $form[$key][$lang][0]['#title'] = check_plain($map[$key]['label']);
-          $form[$key][$lang][0]['#description'] = $map[$key]['description'];
+          $form[$key][$lang][0]['#description'] =  $map[$key]['description'] . '<br />' . $form[$key][$lang][0]['#description'];
           if (!array_key_exists('#type', $form[$key][$lang][0])) {
             // For some reason plain text has no type.
             if (!isset($form[$key][$lang][0]['value']['#default_value'])) {
