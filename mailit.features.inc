@@ -113,7 +113,7 @@ function mailit_node_info() {
       'base' => 'node_content',
       'description' => t('An email that will be sent to one or more lists for moderation.'),
       'has_title' => '1',
-      'title_label' => t('Name'),
+      'title_label' => t('Message Name'),
       'help' => '',
     ),
     'mail_list' => array(
