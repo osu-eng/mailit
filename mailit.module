@@ -67,18 +67,18 @@ function mailit_theme_registry_alter(&$theme_registry) {
 function mailit_campaign_preview_form($form, &$form_state, $node) {
 
   drupal_add_js('
-	function setIframeHeight(iframe) {
-	  if (iframe) {
-	    var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
-	    if (iframeWin.document.body) {
-	       iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
-	    }
-	  }
-	};
-	window.onload = function () {
+  function setIframeHeight(iframe) {
+    if (iframe) {
+      var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+      if (iframeWin.document.body) {
+         iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+      }
+    }
+  };
+  window.onload = function () {
       setIframeHeight(document.getElementById(\'mail-preview-frame\'));
     };
-  	', 'inline');
+    ', 'inline');
 
   $form = array();
 
@@ -143,17 +143,21 @@ function mailit_campaign_preview_form($form, &$form_state, $node) {
  * Form callback to send email
  */
 function mailit_campaign_preview_form_send($form, &$form_state) {
-  $campaign = node_load($form_state['values']['nid']);
 
-  if ($form_state['values']['op'] == 'Send to List') {
-    $ref = field_get_items('node', $campaign, 'field_mail_cpn_list');
-    $list = node_load($ref[0]['target_id']);
-    $field = field_get_items('node', $campaign, 'field_mail_list_address');
+
+  $campaign = node_load($form_state['values']['nid']);
+  $ref = field_get_items('node', $campaign, 'field_mail_cpn_list');
+  $list = node_load($ref[0]['target_id']);
+  $items = field_get_items('node', $list, 'field_mail_list_id');
+
+  if ($form_state['values']['op'] == 'Send to ' . check_plain($items[0]['value']) ) {
+    $field = field_get_items('node', $list, 'field_mail_list_address');
     drupal_mail('mailit', 'send/' . $campaign->nid, $field[0]['email'], language_default());
     drupal_set_message(t('Message sent to !mail', array('!mail' => $field[0]['email'])));
+    drupal_goto('mail/my-campaigns');
   }
   else {
-  	$user = user_uid_optional_load();
+    $user = user_uid_optional_load();
     drupal_mail('mailit', 'test/' . $campaign->nid, $user->mail, language_default());
     drupal_set_message(t('Test message sent to !mail', array('!mail' => $user->mail)));
   }
@@ -172,8 +176,8 @@ function mailit_mail($key, &$message, $params) {
     drupal_set_message('Invalid key to mailit_mail', 'error');
   }
   else {
-  	$mode = $matches[1];
-  	$nid = $matches[2];
+    $mode = $matches[1];
+    $nid = $matches[2];
 
     $campaign = node_load($nid);
 
@@ -191,7 +195,7 @@ function mailit_mail($key, &$message, $params) {
 
     // Set reply-to
     $field = field_get_items('node', $campaign, 'field_mail_cpn_replyto');
-    $message['hedaers']['Reply-To'] = $field[0]['email'];
+    $message['headers']['Reply-To'] = $field[0]['email'];
 
     // Try sending html email
     $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed';
@@ -228,7 +232,7 @@ function mailit_mail($key, &$message, $params) {
         'created' => REQUEST_TIME,
         'recipient' => $message['to'],
         'html' => $message['body'],
-  		))
+      ))
       ->execute();
   }
 }
@@ -247,7 +251,7 @@ function mailit_campaign_preview_form_edit($form, &$form_state) {
  */
 function mailit_node_view($node, $build_mode = 'full') {
   if ($node->type == 'mail_campaign') {
-  	// Cheesiest. hack. ever.
+    // Cheesiest. hack. ever.
     drupal_goto('campaign/' . $node->nid . '/preview');
   }
 }
@@ -302,11 +306,11 @@ function mailit_campaign_view($nid, $vid=NULL) {
     }
     else if ($log = db_query("SELECT * FROM {mailit_log} WHERE nid = :nid and vid = :vid", array(':nid' => $nid, ':vid' => $vid))->fetchObject()) {
       // If we need something other than the current version, assume we're trying to send it from the log
-    	print $log->html;
+      print $log->html;
     }
     else {
       // Otherwise this is not something we should show.
-    	drupal_not_found();
+      drupal_not_found();
     }
   }
 }
@@ -364,7 +368,7 @@ function mailit_form_mail_campaign_node_form_alter(&$form, &$form_state, $form_i
     );
   }
   else {
-  	$form['actions']['next']['#access'] = TRUE;
+    $form['actions']['next']['#access'] = TRUE;
   }
 
   if (($step < MAILIT_CAMPAIGN_FORM_LAST_STEP) && !is_numeric($form['nid']['#value'])) {
@@ -388,7 +392,7 @@ function mailit_form_mail_campaign_node_form_alter(&$form, &$form_state, $form_i
 
           $lang = $form[$key]['#language'];
           $form[$key][$lang][0]['#title'] = check_plain($map[$key]['label']);
-          $form[$key][$lang][0]['#description'] = $map[$key]['description'];
+          $form[$key][$lang][0]['#description'] =  $map[$key]['description'] . '<br />' . $form[$key][$lang][0]['#description'];
           if (!array_key_exists('#type', $form[$key][$lang][0])) {
             // For some reason plain text has no type.
             if (!isset($form[$key][$lang][0]['value']['#default_value'])) {
@@ -434,7 +438,7 @@ function mailit_node_unpublish($form, &$form_state) {
     // if we come in from the node edit pages
     $node = $form['#node'];
   }
-  else if (array_key_exists($form_state['values']['nid'])) {
+  else if (array_key_exists('nid', $form_state['values'])) {
     // If we come in from the preview page
     $node = node_load($form_state['values']['nid']);
   }
@@ -460,7 +464,7 @@ function mailit_campaign_form_by_step() {
     'field_mail_cpn_tpl_ref'   => 2,
   );
   foreach (mailit_template_fields() as $field) {
-  	$steps[$field] = 3;
+    $steps[$field] = 3;
   }
   return $steps;
 }
@@ -472,7 +476,7 @@ function mailit_campaign_form_by_step() {
  */
 function mailit_template_fields() {
   $fields = array(
-  	// plain text
+    // plain text
     'field_mail_cpn_plain1',
     'field_mail_cpn_plain2',
     'field_mail_cpn_plain3',
@@ -558,7 +562,7 @@ function mailit_template_field_map($nid){
 function mailit_campaign_form_next($form, &$form_state) {
 
   if (array_key_exists('field_mail_cpn_tpl_ref', $form_state['values'])) {
-  	$form_state['storage']['tpl_nid'] = $form_state['values']['field_mail_cpn_tpl_ref']['und'][0]['target_id'];
+    $form_state['storage']['tpl_nid'] = $form_state['values']['field_mail_cpn_tpl_ref']['und'][0]['target_id'];
   }
   if (!isset($form_state['storage']['step'])) {
     $form_state['storage']['step'] = 1;
@@ -590,4 +594,3 @@ function mailit_field_attach_validate($obj_type, $object, &$errors) {
     unset($errors['foo'], $errors['bar']);
   }
 }
-
