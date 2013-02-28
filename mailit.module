@@ -195,7 +195,7 @@ function mailit_mail($key, &$message, $params) {
 
     // Set reply-to
     $field = field_get_items('node', $campaign, 'field_mail_cpn_replyto');
-    $message['hedaers']['Reply-To'] = $field[0]['email'];
+    $message['headers']['Reply-To'] = $field[0]['email'];
 
     // Try sending html email
     $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed';
