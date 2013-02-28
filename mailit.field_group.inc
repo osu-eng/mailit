@@ -78,7 +78,7 @@ function mailit_field_group_info() {
       'instance_settings' => array(
         'required_fields' => 1,
         'classes' => '',
-        'description' => 'A collection of links that will go in the footer of your email.',
+        'description' => 'A collection of links that will go in the footer of your email. To remove any or all footer links, you must delete any or all of the entries below.',
       ),
       'formatter' => 'collapsed',
     ),
