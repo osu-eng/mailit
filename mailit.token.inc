@@ -164,6 +164,7 @@ function mailit_tokens($type, $tokens, array $data = array(), array $options = a
       else if ($name == 'links') {
         $social = array('twitter', 'facebook', 'linkedin', 'youtube', 'flickr');
         $social_links = array();
+        $links = array();
         foreach ($social as $name) {
           $field = 'field_mail_cpn_' . $name;
           $items = field_get_items('node', $campaign, $field);
