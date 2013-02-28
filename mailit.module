@@ -438,7 +438,7 @@ function mailit_node_unpublish($form, &$form_state) {
     // if we come in from the node edit pages
     $node = $form['#node'];
   }
-  else if (array_key_exists($form_state['values']['nid'])) {
+  else if (array_key_exists('nid', $form_state['values'])) {
     // If we come in from the preview page
     $node = node_load($form_state['values']['nid']);
   }
